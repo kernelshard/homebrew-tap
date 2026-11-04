@@ -5,21 +5,21 @@
 class Expose < Formula
   desc "The open-source, pure Go alternative to ngrok."
   homepage "https://kernelshard.github.io/expose/"
-  version "0.6.1"
+  version "0.6.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kernelshard/expose/releases/download/v0.6.1/expose_Darwin_x86_64.tar.gz"
-      sha256 "b4c76841eb8dd905589cab29860218c7aed88e4e0e377e195b9ff97d21b6865b"
+      url "https://github.com/kernelshard/expose/releases/download/v0.6.2/expose_Darwin_x86_64.tar.gz"
+      sha256 "d8aff636a3c55f18191bb06c4b2bb7b3121efc1db18e092128261ad2c361f150"
 
       define_method(:install) do
         bin.install "expose"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kernelshard/expose/releases/download/v0.6.1/expose_Darwin_arm64.tar.gz"
-      sha256 "ef0d56adfea40733abe6fd08a5dffac0c33eda66e19175d250ca6b1ad5cc6147"
+      url "https://github.com/kernelshard/expose/releases/download/v0.6.2/expose_Darwin_arm64.tar.gz"
+      sha256 "c4ef9286d1f721be345ebec017043f5d63d80a4065e6eb4b1db15a018018c17f"
 
       define_method(:install) do
         bin.install "expose"
@@ -29,15 +29,15 @@ class Expose < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernelshard/expose/releases/download/v0.6.1/expose_Linux_x86_64.tar.gz"
-      sha256 "08e24a62203c73d2fa29c5362ce626d3709d2e6375699fd5f05adeb065b9cc51"
+      url "https://github.com/kernelshard/expose/releases/download/v0.6.2/expose_Linux_x86_64.tar.gz"
+      sha256 "180eaf7348391b449c1535fd3827cf3eacebf3fe49ff2fc07eccbcd391daa8a9"
       define_method(:install) do
         bin.install "expose"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernelshard/expose/releases/download/v0.6.1/expose_Linux_arm64.tar.gz"
-      sha256 "db2533bfcd4a7f6e1cc5bafdbf514e8e11ef9ad8b2fd3b10d7957ca45daad509"
+      url "https://github.com/kernelshard/expose/releases/download/v0.6.2/expose_Linux_arm64.tar.gz"
+      sha256 "e10456d1b5fcfa4c7593515a8d44c3f74da9d376151706bf7cc25e9fb35a557b"
       define_method(:install) do
         bin.install "expose"
       end
